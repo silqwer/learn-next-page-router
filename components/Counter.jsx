@@ -11,10 +11,10 @@ export default function Counter() {
   return (
     <div>
       <p data-cy="counter">{counter}</p>
-      <button type="button" onClick={increase}>
+      <button data-cy="add-button" type="button" onClick={increase}>
         +
       </button>
-      <button type="button" onClick={decrease}>
+      <button data-cy="sub-button" type="button" onClick={decrease}>
         -
       </button>
     </div>
