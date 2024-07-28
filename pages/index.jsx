@@ -1,4 +1,3 @@
-import Counter from "@/components/Counter";
 import ProductList from "@/components/product-list/ProductList";
 import ProductHeader from "@/components/ProductHeader";
 
@@ -9,7 +8,6 @@ function ProductPage() {
   return (
     <div>
       <ProductHeader title={headerTitle} />
-      <Counter />
       <ProductList></ProductList>
     </div>
   );
