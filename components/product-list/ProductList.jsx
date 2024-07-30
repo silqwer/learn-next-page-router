@@ -1,9 +1,8 @@
-import axios from 'axios';
+import { fetchProducts } from '@/api';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from './ProductList.module.css';
-import Link from 'next/link';
-import { fetchProducts } from '@/api';
 // import { fetchProducts } from '@/api/index';
 
 function ProductList() {
@@ -22,7 +21,7 @@ function ProductList() {
       {products &&
         products.map(product => {
           return (
-            <li key={product.id} className={styles.item}>
+            <li data-cy="product-item" key={product.id} className={styles.item}>
               <Link href={`/products/${product.id}`}>
                 <div>
                   {/* <img src="" alt="" /> */}

@@ -1,9 +1,9 @@
-import ProductList from "@/components/product-list/ProductList";
-import ProductHeader from "@/components/ProductHeader";
+import ProductList from '@/components/product-list/ProductList';
+import ProductHeader from '@/components/ProductHeader';
 
 // '/'에 해당하는 페이지 컴포넌트
 function ProductPage() {
-  const headerTitle = "상품 목록 페이지";
+  const headerTitle = '상품 목록 페이지';
 
   return (
     <div>
