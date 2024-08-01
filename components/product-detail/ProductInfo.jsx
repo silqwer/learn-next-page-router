@@ -5,7 +5,7 @@ import { createCartItem } from '@/api';
 
 export default function ProductInfo({ productDetail }) {
   const router = useRouter();
-  const { id, name, imageUrl, price } = productDetail;
+  const { name, imageUrl, price } = productDetail;
 
   const addCart = async () => {
     // 1. 장바구니에 아이템을 담는 API 함수 호출
@@ -19,11 +19,17 @@ export default function ProductInfo({ productDetail }) {
   return (
     <div className={styles.container}>
       <div>
-        <Image src={imageUrl} width={250} height={250} alt={name} />
+        <Image
+          src={imageUrl}
+          width={250}
+          height={250}
+          alt={name}
+          data-cy="product-image"
+        />
       </div>
       <div className={styles.description}>
-        <p>{name}</p>
-        <p>{price}</p>
+        <p data-cy="product-name">{name}</p>
+        <p data-cy="product-price">{price}</p>
         <button onClick={addCart}>장바구니에 담기</button>
       </div>
     </div>
