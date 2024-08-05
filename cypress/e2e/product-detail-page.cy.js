@@ -18,4 +18,9 @@ describe('상품 상세 페이지', () => {
       expect(stub.getCall(0)).to.be.calledWith('장바구니에 추가됨');
     });
   });
+
+  it.only('장바구니에 담기 버튼을 클릭하면 장바구니 페이지로 이동한다.', () => {
+    cy.getByCy('add-cart-button').click();
+    cy.url().should('include', '/cart');
+  });
 });
