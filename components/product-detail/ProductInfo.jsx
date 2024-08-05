@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import styles from './ProductInfo.module.css';
-import { useRouter } from 'next/router';
 import { createCartItem } from '@/api';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import styles from './ProductInfo.module.css';
 
 export default function ProductInfo({ productDetail }) {
   const router = useRouter();
@@ -30,7 +30,9 @@ export default function ProductInfo({ productDetail }) {
       <div className={styles.description}>
         <p data-cy="product-name">{name}</p>
         <p data-cy="product-price">{price}</p>
-        <button onClick={addCart}>장바구니에 담기</button>
+        <button onClick={addCart} data-cy="add-cart-button">
+          장바구니에 담기
+        </button>
       </div>
     </div>
   );
